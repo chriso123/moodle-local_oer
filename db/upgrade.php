@@ -328,7 +328,7 @@ function xmldb_local_oer_upgrade($oldversion) {
             if (!empty($record->oefos)) {
                 $oefos = explode(',', $record->oefos);
                 $classification = [
-                        'oefos' => $oefos,
+                    'oefos' => $oefos,
                 ];
                 $record->classification = json_encode($classification);
             } else {
@@ -369,7 +369,7 @@ function xmldb_local_oer_upgrade($oldversion) {
             if (!empty($record->oefos)) {
                 $oefos = explode(',', $record->oefos);
                 $classification = [
-                        'oefos' => $oefos,
+                    'oefos' => $oefos,
                 ];
                 $record->classification = json_encode($classification);
             } else {
@@ -855,7 +855,7 @@ function xmldb_local_oer_upgrade($oldversion) {
                 // How can it be smaller? The values were sorted by timecreated.
                 echo html_writer::div(
                     $record->identifier .
-                        ': "releasenumber" could not be updated, has to be changed manually',
+                    ': "releasenumber" could not be updated, has to be changed manually',
                     'adminwarning'
                 );
             }
@@ -896,7 +896,7 @@ function xmldb_local_oer_upgrade($oldversion) {
                 if ($decomposed->valuetype != 'contenthash') {
                     echo html_writer::div(
                         $releasedfile->identifier .
-                            ': Element is not a Moodle stored file. How is that possible during this update?',
+                        ': Element is not a Moodle stored file. How is that possible during this update?',
                         'adminwarning'
                     );
                     continue;
@@ -919,7 +919,7 @@ function xmldb_local_oer_upgrade($oldversion) {
                     if (!$storedfile) {
                         echo html_writer::div(
                             $releasedfile->identifier .
-                                ': File does not exist anymore. Entry has to be cleaned up manually',
+                            ': File does not exist anymore. Entry has to be cleaned up manually',
                             'adminwarning'
                         );
                         continue;
@@ -933,9 +933,9 @@ function xmldb_local_oer_upgrade($oldversion) {
                         $storedfile->get_filename()
                     );
                     $releasedfile->typedata = json_encode([
-                            'mimetype' => $storedfile->get_mimetype(),
-                            'filesize' => $storedfile->get_filesize(),
-                            'source' => $url->out(),
+                        'mimetype' => $storedfile->get_mimetype(),
+                        'filesize' => $storedfile->get_filesize(),
+                        'source' => $url->out(),
                     ]);
                     $DB->update_record('local_oer_snapshot', $releasedfile);
                     break;
@@ -948,7 +948,6 @@ function xmldb_local_oer_upgrade($oldversion) {
     }
 
     if ($oldversion < 2025121500) {
-
         // Define field doi to be added to local_oer_snapshot.
         $table = new xmldb_table('local_oer_snapshot');
         $field = new xmldb_field('doi', XMLDB_TYPE_TEXT, null, null, null, null, null, 'typedata');
@@ -961,7 +960,6 @@ function xmldb_local_oer_upgrade($oldversion) {
         // Oer savepoint reached.
         upgrade_plugin_savepoint(true, 2025121500, 'local', 'oer');
     }
-
 
     return true;
 }

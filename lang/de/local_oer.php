@@ -25,6 +25,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+$string['add_doi_link'] = 'DOI Link zeigen';
+$string['add_doi_link_description'] = 'Zeigen Sie den Link zum externen Repository anhand seines Digital Object Identifier (DOI) an. Das local_oer-Plugin erstellt keine DOIs, kann jedoch den DOI aus einem Repository laden. Es wird eine tägliche Aufgabe aktiviert, die die DOIs bereits veröffentlichter OER-Objekte aktualisiert.';
 $string['addpersonbtn'] = 'Person hinzufügen';
 $string['all'] = 'Alle Elemente';
 $string['allowed'] = '<p>Durch den Upload Ihrer Lehr- und Lernmaterialien machen Sie ' .
@@ -264,6 +266,8 @@ $string['notallowedtext_desc'] = 'Der Zugang zum Datei Metadaten Editor wird von
         'Einstellung verfügbar damit organisationsbezogene Daten wie ' .
         'z.B. Support E-Mail oder Telefonnummer angezeigt werden können.';
 $string['notmarkedforupload'] = 'Wurde nicht zum Veröffentlichen vorgemerkt';
+$string['oai-pmh_url'] = 'OAI-PMH Repositoriums URL';
+$string['oai-pmh_url_description'] = 'URL zur OAI-PMH-Instanz, unter der die DOIs für die OER-Objekte zu finden sind. Die URL sollte auf einen öffentlich zugänglichen OAI-PMH-XML-Dienst verweisen.';
 $string['objectives'] = 'Lernziel';
 $string['objectives_help'] = 'Was sind die Lernziele des Kurses.';
 $string['oer:edititems'] = 'Berechtigung Metadaten von Dateien zu bearbeiten.';

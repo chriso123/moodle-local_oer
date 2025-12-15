@@ -947,6 +947,22 @@ function xmldb_local_oer_upgrade($oldversion) {
         upgrade_plugin_savepoint(true, 2024022601, 'local', 'oer');
     }
 
+    if ($oldversion < 2025121500) {
+
+        // Define field doi to be added to local_oer_snapshot.
+        $table = new xmldb_table('local_oer_snapshot');
+        $field = new xmldb_field('doi', XMLDB_TYPE_TEXT, null, null, null, null, null, 'typedata');
+
+        // Conditionally launch add field doi.
+        if (!$dbman->field_exists($table, $field)) {
+            $dbman->add_field($table, $field);
+        }
+
+        // Oer savepoint reached.
+        upgrade_plugin_savepoint(true, 2025121500, 'local', 'oer');
+    }
+
+
     return true;
 }
 

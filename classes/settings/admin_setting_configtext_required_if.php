@@ -41,16 +41,13 @@ class admin_setting_configtext_required_if extends \admin_setting_configtext {
     /**
      * Constructor.
      *
-     * Same fields as configtext, expect $dependentonname.
-     * Can be combined with $settings->hide_if.
+     * Only PARAM_URL is supported for the configtext element.
      *
      * @param string $name The name of this setting
      * @param string $visiblename Lang string shown to user
      * @param string $description Description of this setting
      * @param mixed $defaultsetting Default value
      * @param string $dependentonname The full name of the CHECKBOX setting (e.g., 'local_oer/checkbox')
-     * @param string $param Type of the text
-     * @param int|null $size Length of text input
      */
     public function __construct(
         string $name,
@@ -58,11 +55,9 @@ class admin_setting_configtext_required_if extends \admin_setting_configtext {
         string $description,
         string $defaultsetting,
         string $dependentonname,
-        string $param = PARAM_RAW,
-        ?int $size = null
     ) {
         $this->dependentonname = $dependentonname;
-        parent::__construct($name, $visiblename, $description, $defaultsetting, $param, $size);
+        parent::__construct($name, $visiblename, $description, $defaultsetting, PARAM_URL);
     }
 
     /**
@@ -86,6 +81,12 @@ class admin_setting_configtext_required_if extends \admin_setting_configtext {
 
         if ($ischecked && empty($data)) {
             return get_string('required', 'core');
+        }
+
+        if (!empty($data)) {
+            if (!filter_var($data, FILTER_VALIDATE_URL)) {
+                return get_string('invalidurl', 'local_oer');
+            }
         }
 
         return true;

@@ -197,6 +197,7 @@ $string['ignorecourse'] = 'Ignorieren';
 $string['ignorecourse_help'] = 'Wird der Kurs ignoriert, werden die Metadaten des Kurses bei der ' .
         'Veröffentlichung nicht berücksichtigt.';
 $string['ignoredcourse'] = 'Die Metadaten dieses Kurses ausschliessen';
+$string['invalidurl'] = 'Ungültige URL';
 $string['isignored'] = 'Ignoriert';
 $string['language'] = 'Sprache';
 $string['language_help'] = 'Welche Sprache wird benutzt.';

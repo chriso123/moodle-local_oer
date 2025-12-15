@@ -180,6 +180,7 @@ $string['ignore_help'] = 'The file will be shown as ignored and sorted to the en
 $string['ignorecourse'] = 'Ignore';
 $string['ignorecourse_help'] = 'If selected, this course metadata will not be added to file metadata.';
 $string['ignoredcourse'] = 'Exclude the metadata of this course';
+$string['invalidurl'] = 'Invalid URL';
 $string['isignored'] = 'Ignored';
 $string['language'] = 'Language';
 $string['language_help'] = 'What language is used';
@@ -246,7 +247,7 @@ $string['notallowedtext_desc'] = 'Access to the file metadata editor is controll
         'related data such as support email or phone number.';
 $string['notmarkedforupload'] = 'Not marked for release';
 $string['oai-pmh_url'] = 'OAI-PMH repository URL';
-$string['oai-pmh_url_description'] = 'URL to the OAI-PMH instance, where the DOIs for the oer objects can be found. The URL should point to a public accessible OAI-PMH xml service.';
+$string['oai-pmh_url_description'] = 'URL to the OAI-PMH instance, where the DOIs for the OER objects can be found. The URL should point to a public accessible OAI-PMH xml service.';
 $string['objectives'] = 'Objective';
 $string['objectives_help'] = 'What are the main goals of this course.';
 $string['oer:edititems'] = 'Edit file metadata in oer plugin';

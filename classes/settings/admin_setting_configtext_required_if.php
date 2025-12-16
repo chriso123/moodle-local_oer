@@ -46,7 +46,7 @@ class admin_setting_configtext_required_if extends \admin_setting_configtext {
      * @param string $name The name of this setting
      * @param string $visiblename Lang string shown to user
      * @param string $description Description of this setting
-     * @param mixed $defaultsetting Default value
+     * @param string $defaultsetting Default value
      * @param string $dependentonname The full name of the CHECKBOX setting (e.g., 'local_oer/checkbox')
      */
     public function __construct(
@@ -67,7 +67,7 @@ class admin_setting_configtext_required_if extends \admin_setting_configtext {
      * Then get the checkbox from the post data, as it is not stored yet.
      * When the checkbox is set,
      *
-     * @param $data
+     * @param array $data
      * @return \lang_string|mixed|string|true
      */
     public function validate($data) {

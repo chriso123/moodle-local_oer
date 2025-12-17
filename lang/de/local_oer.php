@@ -502,6 +502,7 @@ $string['tags_help'] = '<p>Zusätzliche Schlagwörter zur Klassifizierung der Da
         'wird es oberhalb des Eingabefeldes angezeigt.</p>' .
         '<p>Sie können ein Schlagwort entfernen, indem Sie auf ' .
         'das Schlagwort oberhalb des Eingabefeldes klicken.</p>';
+$string['task:updatedoi'] = 'DOIs in Snapshots aktualisieren';
 $string['timediff'] = '{$a->days} Tage, {$a->hours} Stunden und {$a->minutes} Minuten';
 $string['title'] = 'Titel';
 $string['title_asc'] = 'Titel aufsteigend';

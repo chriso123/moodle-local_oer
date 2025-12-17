@@ -246,7 +246,7 @@ if ($hassiteconfig) {
     ));
 
     $settings->add(new \local_oer\settings\admin_setting_configtext_required_if(
-        'local_oer/oaipmh_url',
+        'local_oer/oai_pmh_url',
         new \core\lang_string('oai-pmh_url', 'local_oer'),
         new \core\lang_string('oai-pmh_url_description', 'local_oer'),
         '',

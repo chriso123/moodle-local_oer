@@ -474,6 +474,7 @@ $string['tags_help'] = '<p>Additional tags to classify the file.</p>' .
         'it above the input field.</p>' .
         '<p>You can remove a tag by clicking on the ' .
         'tag above the input field.</p>';
+$string['task:updatedoi'] = 'Update DOIs of snapshots';
 $string['timediff'] = '{$a->days} days, {$a->hours} hours and {$a->minutes} minutes';
 $string['title'] = 'Title';
 $string['title_asc'] = 'Title ascending';
